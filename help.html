@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="Img/logo.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Island+Moments&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Supermercado+One&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/templates.js"></script>
+    <title>Join</title>
+</head>
+
+<body onload="includeHTML()">
+    <div w3-include-html="templates/header.html" class="header"></div>
+
+    <div class="help m-left-50 m-top">
+        <h1>Help</h1>
+        <p>Hier finden Sie die benötigte Hilfe zu unserer Join Kanban:</p>
+    </div>
+    <div class="m-left-50 tasks">
+        <ul>
+
+            <li>
+                <h2><b>ADDTASK:</b> </h2>Hier können Sie Aufgaben erstellen und verfügbares Personal zuteilen.</li>
+            <li>
+                <h2><b>BACKLOG:</b></h2> Hier können Sie alle Aktivitäten oder Aufgaben, die erstellt wurden, einsehen.
+                <ol>
+                    <ul>
+                        <h3>Main Funktion</h3>
+                        <li> Wenn Sie mit dem Mauszeiger auf die Bilder von den Kollegen gehen, werden die Informationen von den jeweiligen Personen angezeigt</li>
+                        <li>Die Details jeder Aufgabe können Sie jederzeit bearbeiten, in dem Sie auf den Text klicken.</li>
+                        <li>
+                            <span class="d-flex">Wenn Sie hier <img style="padding: 4px 4px; width: 30px;" src="img/arrowToBoard.ico"> drauf klicken, werden die Tasks an Board weitergeleitet. </span>
+                        </li>
+
+
+                        <h3>Farbe</h3>
+                        <li class="m-b-10 m-t-10"> Die Aufgaben mit hoher Priorität werden <span class="HighB">rot umrandet.</span></li>
+                        <li class="m-b-10"> Die Aufgaben mit mittlerer Priorität werden <span class="IntermediateB">gelb umrandet.</span></li>
+                        <li class="m-b-10"> Die Aufgaben mit niedriger Priorität werden <span class="LowB">grün umrandet.</span></li>
+                    </ul>
+
+                </ol>
+            </li>
+
+            <li><b><h2>Board:</h2></b> Hier können Sie Ihre Aufgaben, nachdem sie von Backlog weitergeleitet wurden, ansehen.
+                <ol>
+                    <ul>
+                        <h3>Main Funktion</h3>
+                        <li>Hier können Sie Ihre Aufgaben ganz einfach mit Hilfe der Maus von einer Liste z.B <b>Todo</b> zur anderen Liste z.B <b>Progress</b> per Drag und Drop verschieben.</li>
+                        <li> Wenn Sie auf die jeweilige Aufgabe klicken, werden alle Informationen zur jeweiligen Aufgabe in einer Infobox eingebelendet und wenn Sie außerhalb der Infobox klicken, werden die Informationen wieder ausgeblendet.</li>
+                        <li> Wenn Sie in der Infobox mit dem Mauszeiger auf die Bilder von den Kollegen gehen, werden die Informationen von den jeweiligen Personen (wie in Backlog) angezeigt.</li>
+
+                        <h3>Farbe</h3>
+                        <li class="m-b-10 m-t-10"> Die Aufgaben mit hoher Priorität werden <span class="High">rot hinterlegt.</span></li>
+                        <li class="m-b-10"> Die Aufgaben mit mittlerer Priorität werden <span class="Intermediate">gelb hinterlegt.</span></li>
+                        <li class="m-b-10"> Die Aufgaben mit niedriger Priorität werden <span class="Low">grün hinterlegt.</span></li>
+                    </ul>
+                </ol>
+            </li>
+        </ul>
+</body>
+
+</html>
