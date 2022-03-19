@@ -326,6 +326,23 @@ h1 {
     margin-left: 8px;
 }
 
+
+/* Colors on testing done */
+
+.done {
+    background-color: #3baa3b;
+    transition: all 225ms ease-in-out;
+}
+
+.testing {
+    background-color: #848080;
+    transition: all 225ms ease-in-out;
+}
+
+.inProgress {
+    background-color: #ecec28;
+}
+
 @media(max-width: 1200px) {
     .contentCont {
         width: calc(100% - 200px);

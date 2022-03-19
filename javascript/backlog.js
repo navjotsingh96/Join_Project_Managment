@@ -1,4 +1,5 @@
-setURL('http://gruppe-177.developerakademie.net/smallest_backend_ever');
+setURL('http://navjot-singh.developerakademie.net/smallest_backend_ever');
+
 let boardArray = [];
 /**
  *  to load and show saved taskes from Server
