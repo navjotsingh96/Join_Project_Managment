@@ -415,6 +415,23 @@ h3 {
     left: -25px;
 }
 
+.slideOut {
+    animation: slideOut 900ms ease-in-out;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        margin-left: 1000px;
+        opacity: 0;
+    }
+}
+
 
 /* Responsive */
 

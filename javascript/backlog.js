@@ -324,9 +324,13 @@ async function abortButton(i) {
  * @returns this function push array from Backlog to
  */
 async function pushToBoard(i) {
+    let container = document.getElementById(`todo${i}`);
+    container.classList.add('slideOut');
     boardArray.unshift(allTasks[i]);
     await backend.setItem('boardArray', JSON.stringify(boardArray));
     allTasks.splice(i, 1);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
-    loadBacklog();
+    setTimeout(() => {
+        loadBacklog();
+    }, 700);
 }
