@@ -206,6 +206,10 @@ a {
     width: 80vw;
 }
 
+.d-flex {
+    display: flex;
+}
+
 
 /**Animation to impressum on hover*/
 
@@ -225,6 +229,37 @@ a {
 
 .impressum:hover::after {
     width: 370px;
+    margin-left: 50px;
+}
+
+.trash-bin::after {
+    margin-left: 120px;
+}
+
+.trash-bin:hover::after {
+    width: 60px !important;
+    margin-left: 120px !important;
+}
+
+.icons::after {
+    margin: 0;
+}
+
+.icons:hover::after {
+    width: 125px;
+    margin: 0;
+}
+
+.photos:hover::after {
+    width: 50px !important;
+}
+
+.quelle::after {
+    margin-left: 50px;
+}
+
+.quelle:hover::after {
+    width: 180px;
     margin-left: 50px;
 }
 
