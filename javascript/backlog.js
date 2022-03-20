@@ -51,6 +51,7 @@ function renderTemplate(info, index) {
                 <div class="EditAndEmployeeContainer">
                     <div class="infobox">
                        <img src="img/pencil.png" class="pencil3" onclick="openModal(${index})">
+                    <span class="responsive editEmp">Edit</span>
                        <span class="employe-edit info-box-text">Edit Employes</span>
                     </div>
 
@@ -69,6 +70,7 @@ function renderTemplate(info, index) {
                 <div class="detailsTasks flipped">
                 <div class="infobox">
                 <img src="img/pencil.png" class="pencil1" onclick="changeContainer(${index})">
+                <span class="responsive editDate editDetail">Edit</span>
                 <span class="info-box-text details-edit">Edit Details</span>
                 </div>
                     <div class="d-none change" id="textEditCont${index}">
@@ -87,7 +89,10 @@ function renderTemplate(info, index) {
                 <div class="infobox">
 
                 <img src="img/pencil.png" class="pencil2">
+                <span class="responsive editDate">Edit</span>
+
                 <span class="date-edit info-box-text">Edit Date</span>
+
                 </div>
 
                    <div id="dateEdit${index}" class="DateToBeShown">${info['date']}</div> 
@@ -101,6 +106,7 @@ function renderTemplate(info, index) {
                     </div>
                     <div class="infobox hover-push">
                     <img class="pushToBoard" src="img/arrowToBoard.ico" onclick="pushToBoard(${index})"> 
+                    <span class="responsive push">Push to Board</span>
                     <span class="info-box-text push-text">Push to Board</span>
                     </div>
             <div class="modal d-none" id="modalBacklog">

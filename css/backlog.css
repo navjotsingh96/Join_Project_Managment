@@ -50,7 +50,7 @@ h3 {
 .detailsMain {
     position: absolute;
     left: 0;
-    margin-left: 500px;
+    margin-left: 600px;
 }
 
 .dueDateMain {
@@ -163,7 +163,7 @@ h3 {
 .detailsTasks {
     position: absolute;
     left: 0;
-    margin-left: 490px;
+    margin-left: 600px;
     padding-left: 8px;
     text-align: left;
     align-items: center;
@@ -233,7 +233,7 @@ h3 {
 .inputField {
     position: absolute;
     left: 0;
-    top: 0px;
+    top: -15px;
     padding: 8px;
     height: calc(100% - 50px);
     width: calc(100% - 16px);
@@ -250,7 +250,7 @@ h3 {
     position: absolute;
     left: 0;
     display: flex;
-    margin-top: 84px;
+    margin-top: 72px;
 }
 
 .buttonSave {
@@ -354,6 +354,14 @@ h3 {
     position: absolute !important;
     right: 0;
     top: 0;
+}
+
+.push {
+    position: absolute;
+    top: 50px;
+    left: -63px;
+    text-align: center;
+    width: 60px;
 }
 
 
@@ -491,7 +499,7 @@ h3 {
     .pushToBoard {
         position: absolute;
         top: 2px;
-        right: 0;
+        right: 5px;
         margin-top: 8px;
         margin-right: 8px;
     }
@@ -542,7 +550,7 @@ h3 {
         margin-right: 0px;
     }
     .pencil1 {
-        left: 0;
+        left: -30px;
     }
     .dueDateTasks {
         display: flex;
@@ -557,7 +565,7 @@ h3 {
     .pencil2 {
         position: relative;
         top: 0;
-        left: 0px;
+        left: -15px;
     }
     .pencil3 {
         top: 25px;
@@ -565,9 +573,25 @@ h3 {
     .pencil1,
     .pencil2,
     .pencil3 {
-        width: 15px;
+        width: 18px;
     }
     .employeeContainer img {
         margin: 0px 10px;
+    }
+    .editEmp {
+        position: absolute;
+        width: 38px;
+    }
+    .editDate {
+        position: absolute;
+        width: 38px;
+        top: -3px;
+        left: 0px;
+    }
+    .editDetail {
+        left: -10px !important;
+    }
+    .info-box-text {
+        display: none;
     }
 }
