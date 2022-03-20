@@ -486,7 +486,7 @@ h3 {
         flex-direction: column;
         margin-top: 0px !important;
         margin-bottom: 50px !important;
-        margin-left: 22px !important;
+        margin-left: 22px;
         margin-top: 70px;
         transition: all 115ms ease-in-out;
         margin-bottom: 0;
@@ -569,6 +569,7 @@ h3 {
     }
     .pencil3 {
         top: 25px;
+        left: -28px;
     }
     .pencil1,
     .pencil2,
@@ -581,6 +582,7 @@ h3 {
     .editEmp {
         position: absolute;
         width: 38px;
+        left: -38px;
     }
     .editDate {
         position: absolute;
