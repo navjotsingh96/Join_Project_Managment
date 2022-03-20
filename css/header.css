@@ -264,6 +264,18 @@ a {
 }
 
 
+/* Border-Bottom*/
+
+.border-btm {
+    border-bottom: 2px solid transparent !important;
+}
+
+.border-btm:hover {
+    border-bottom: 2px solid white !important;
+    border-left: none;
+}
+
+
 /**Animation to impressum on hover till here*/
 
 @media (max-width: 775px) {
