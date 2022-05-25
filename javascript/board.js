@@ -1,4 +1,4 @@
-setURL('http://navjot-singh.developerakademie.net/smallest_backend_ever');
+setURL('https://navjot-singh.developerakademie.net/smallest_backend_ever');
 
 let currenDraggedElement;
 
