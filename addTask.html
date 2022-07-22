@@ -86,15 +86,18 @@
             </div>
         </div>
     </main>
-    <div class="modal d-none" id="modal">
-        <div class="modal-header">
-            <div class="modal-title">Available Employees</div>
-            <button data-close-button class="close-button" onclick="closeModal()">&times;</button>
-        </div>
-        <div class="modal-body" id="modal-body">
+    <div class="modal-cont d-none" id="modal-cont" onclick="closeModal()">
+        <div class="modal d-none" id="modal">
+            <div class="modal-header">
+                <div class="modal-title">Available Employees</div>
+                <button data-close-button class="close-button" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+            </div>
         </div>
     </div>
     <div id="overlay" class="d-none"></div>
+
 
 
     <!-- The actual snackbar -->

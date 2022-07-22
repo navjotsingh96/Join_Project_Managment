@@ -168,8 +168,11 @@ function assigningEmployees(i) {
 function openModal() {
     let modal = document.getElementById('modal');
     let overlay = document.getElementById('overlay');
+    let modalCont = document.getElementById('modal-cont');
+
     modal.classList.remove('d-none')
     overlay.classList.remove('d-none')
+    modalCont.classList.remove('d-none')
     Employees();
 }
 
@@ -178,11 +181,27 @@ function openModal() {
  * 
  */
 function closeModal() {
+    let modalCont = document.getElementById('modal-cont');
+
     let modal = document.getElementById('modal');
     let overlay = document.getElementById('overlay');
+    modalCont.classList.add('d-none')
+
     modal.classList.add('d-none')
     overlay.classList.add('d-none')
 }
+
+function closeModalMain() {
+    let modalCont = document.getElementById('modal-cont');
+
+    let modal = document.getElementById('modal');
+    let overlay = document.getElementById('overlay');
+
+
+    modal.classList.add('d-none')
+
+}
+
 
 
 /**

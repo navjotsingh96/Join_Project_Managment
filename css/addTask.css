@@ -100,6 +100,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 450px;
 }
 
+.modal-cont {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
 .textarea {
     display: flex;
     flex-direction: column;
