@@ -130,9 +130,16 @@ function renderTemplate(info, index) {
  * This function deletes one task[index] via onclick and stores the changes in the backend  
  */
 async function deleteContainer(index) {
-    allTasks.splice(index, 1);
-    await backend.setItem('allTasks', JSON.stringify(allTasks));
-    renderBacklogTasks();
+    try {
+        allTasks.splice(index, 1);
+
+        await backend.setItem('allTasks', JSON.stringify(allTasks));
+        renderBacklogTasks();
+        snackbarDelete();
+    } catch (e) {
+        console.log(e);
+    }
+
 }
 /**
  * 
@@ -243,6 +250,7 @@ async function closeModal() {
 async function delteEmployee(index, j) {
     allTasks[index]['assignEmployee'].splice(j, 1);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
+
     renderBacklogTasks();
 }
 /**
@@ -332,8 +340,16 @@ async function abortButton(i) {
 async function pushToBoard(i) {
     slideOutAni(i);
     boardArray.unshift(allTasks[i]);
-    await backend.setItem('boardArray', JSON.stringify(boardArray));
-    allTasks.splice(i, 1);
+    try {
+        await backend.setItem('boardArray', JSON.stringify(boardArray));
+        allTasks.splice(i, 1);
+        console.log('Suceesfully');
+        snackbarAdded();
+    } catch (e) {
+        console.log(e);
+        snackbarError()
+    }
+
     await backend.setItem('allTasks', JSON.stringify(allTasks));
     setTimeout(() => {
         loadBacklog();
@@ -343,4 +359,34 @@ async function pushToBoard(i) {
 function slideOutAni(i) {
     let container = document.getElementById(`todo${i}`);
     container.classList.add('slideOut');
+}
+/**
+ * If Task sucessfuuly added to  board  then snackbar will be showed
+ */
+function snackbarAdded() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+}
+
+/**
+ * If Task can't added to board then snackbar will be showed
+ */
+function snackbarError() {
+    var x = document.getElementById("snackbar-error");
+    x.className = "show";
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+}
+/**
+ * If Task  deleted from Backlog then snackbar will be showed
+ */
+function snackbarDelete() {
+    var x = document.getElementById("snackbar-delete");
+    x.className = "show";
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
 }

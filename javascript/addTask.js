@@ -90,7 +90,7 @@ async function createTask() {
             console.log('Added succesly');
             setTimeout(() => {
                 location.reload()
-            }, 3000);
+            }, 2500);
 
         } catch (e) {
             console.log(e);

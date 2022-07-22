@@ -195,12 +195,17 @@ function generateOpenTaskHTML(task) {
  */
 async function deleteTask(i) {
     let element = boardArray.findIndex(obj => obj.UnixStamp == i);
-    boardArray.splice(element, 1);
-    await backend.setItem('boardArray', JSON.stringify(boardArray));
-    document.getElementById('overlayBg').classList.add('d-none');
-    document.getElementById('openTask').classList.add('d-none');
-    document.getElementById('openTask').classList.remove('exit-ani');
-    loadBoard();
+    try {
+        boardArray.splice(element, 1);
+        await backend.setItem('boardArray', JSON.stringify(boardArray));
+        document.getElementById('overlayBg').classList.add('d-none');
+        document.getElementById('openTask').classList.add('d-none');
+        document.getElementById('openTask').classList.remove('exit-ani');
+        snackbarDelete()
+        loadBoard();
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 /**
@@ -306,4 +311,12 @@ function moveTo(i) {
 async function save() {
     await backend.setItem('boardArray', JSON.stringify(boardArray));
     loadBoard();
+}
+/**
+ * If Task  deleted from Backlog then snackbar will be showed
+ */
+function snackbarDelete() {
+    var x = document.getElementById("snackbar-delete");
+    x.className = "show";
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
 }
