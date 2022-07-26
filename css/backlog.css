@@ -489,6 +489,13 @@ h3 {
 
 /* Responsive */
 
+@media (max-width: 1350px) {
+    .detailsTasks,
+    .detailsMain {
+        margin-left: 500px;
+    }
+}
+
 @media (max-width: 1450px) {
     .detailsTasks {
         width: 350px;
