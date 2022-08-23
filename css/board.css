@@ -437,7 +437,7 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 240px
+        width: 80%
     }
     .headerOpenTask {
         flex-direction: column;
@@ -454,6 +454,15 @@ h1 {
     }
     .currentEmployer2 {
         margin-top: 8px;
+    }
+    .closeTask {
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+    .delete {
+        position: absolute;
+        right: 20px
     }
 }
 

@@ -1,7 +1,7 @@
 setURL('https://navjot-singh.developerakademie.net/smallest_backend_ever');
 
 let currenDraggedElement;
-
+let tocuh = false;
 /**
  * This function is called by the onload function, loads the boardArray from the backend and triggers the renderBoard() function.
  * 
@@ -11,6 +11,18 @@ async function loadBoard() {
     boardArray = JSON.parse(backend.getItem('boardArray')) || [];
     renderBoard();
 }
+
+const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+}
+console.log(isTouchDevice())
+
+const tisTouchDevice = () => {
+    return window.matchMedia("(pointer: coarse)").matches
+}
+console.log(tisTouchDevice())
 
 /**
  * This function filters the boardArray for the string in the key-value pair "inArray" and assigns the objects with that string to the respective variables. 
@@ -112,6 +124,8 @@ function generateTasksHTML(element, i, type) {
  * @param {string} type - This parameter passes the string from the key-value pair "inArray".
  */
 function openTask(i, type) {
+    isTouchDevice();
+    console.log(isTouchDevice());
     document.getElementById('overlayBg').classList.remove('d-none');
     document.getElementById('openTask').classList.remove('d-none');
     let tasks = boardArray.filter(t => t['inArray'] == type);
@@ -144,7 +158,8 @@ function openTask(i, type) {
         </div>
         `;
     }
-    phoneSize();
+    touchAllow();
+
 }
 /**
  * This function generates HTML and returns the generated to the if-query.
@@ -180,7 +195,7 @@ function generateOpenTaskHTML(task) {
                 <div>Category: <span class="bold">${task['catergory']}</span></div>
                 <div class="currentemployee2" id="currentemployee2"></div>
             </div>
-            <div class="pushTo d-none" onclick="pushToOtherBoard('${task['UnixStamp']}')" id="pushToOtherBoard">
+            <div class="pushTo" onclick="pushToOtherBoard('${task['UnixStamp']}')" id="pushToOtherBoard">
                 <span id="pushTo"></span>
                 <img class="arrow" src="img/arrow.ico">
             </div>
@@ -222,11 +237,12 @@ function popup(j) {
  *  For small screens, a button is added to move to the next board.
  * 
  */
-function phoneSize() {
-    if (window.matchMedia('(min-width: 775px)').matches) {
-        document.getElementById('pushToOtherBoard').classList.add('d-none');
-    } else {
+function touchAllow() {
+    if (isTouchDevice()) {
         document.getElementById('pushToOtherBoard').classList.remove('d-none');
+
+    } else {
+        document.getElementById('pushToOtherBoard').classList.add('d-none');
     }
 }
 

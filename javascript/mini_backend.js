@@ -22,8 +22,8 @@ window.onload = async function() {
 async function downloadFromServer() {
     let result = await loadJSONFromServer();
     jsonFromServer = JSON.parse(result);
-    console.log('Loaded', result);
 }
+
 function setURL(url) {
     BASE_SERVER_URL = url;
 }
@@ -35,6 +35,7 @@ async function loadJSONFromServer() {
     let response = await fetch(BASE_SERVER_URL + '/nocors.php?json=database&noache=' + (new Date().getTime()));
     return await response.text();
 }
+
 function loadJSONFromServerOld() {
     return new Promise(function(resolve, reject) {
         let xhttp = new XMLHttpRequest();
@@ -76,6 +77,7 @@ function saveJSONToServer() {
         xhttp.send(JSON.stringify(jsonFromServer));
     });
 }
+
 function determineProxySettings() {
     return '';
     if (window.location.href.indexOf('.developerakademie.com') > -1) {
@@ -89,12 +91,3 @@ function determineProxySettings() {
 //     await backend.setItem('allTasks', allTasksAsString);
 //     console.log(allTasksAsString);
 // }
-
-
-
-
-
-
-
-
-

@@ -33,7 +33,7 @@ function renderBacklogTasks() {
 function noTasks() {
     return `
     <div class="todoContainer" style="justify-content:center;">
-    Keine Tasks mehr
+    No more Tasks
     </div>`;
 }
 /**

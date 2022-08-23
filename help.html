@@ -13,26 +13,33 @@
     <link rel="stylesheet" href="css/help.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/templates.js"></script>
+    <script src="javascript/language.js"></script>
+
     <title>Join</title>
 </head>
 
 <body onload="includeHTML()">
     <div w3-include-html="templates/header.html" class="header"></div>
+    <!--Language change function-->
+    <div class="language">
+        <span class="EN selected" id="EN" onclick="EnglishLang()">English</span> |
+        <span onclick="DeutschLang()" id="DE" class="DE">Deustch</span>
+    </div>
 
-    <div class="help m-left-50 m-top">
-        <h1>Help</h1>
+    <div id="german" class="help m-left-50 m-top d-none">
+        <h1>Hilfe</h1>
         <p>Hier finden Sie die benötigte Hilfe zu unserer Join Kanban:</p>
     </div>
-    <div class="m-left-50 tasks m-btm">
+    <div id="german-1" class="m-left-50 tasks m-btm d-none">
         <ul>
 
             <li>
-                <h2><b>ADDTASK:</b> </h2>Hier können Sie Aufgaben erstellen und verfügbares Personal zuteilen.</li>
+                <h2><b>Add Task(Aufgabe hinzufügen):</b> </h2>Hier können Sie Aufgaben erstellen und verfügbares Personal zuteilen.</li>
             <li>
-                <h2><b>BACKLOG:</b></h2> Hier können Sie alle Aktivitäten oder Aufgaben, die erstellt wurden, einsehen.
+                <h2><b>Backlog(Offene Aufgaben):</b></h2> Hier können Sie alle Aktivitäten oder Aufgaben, die erstellt wurden, einsehen.
                 <ol>
                     <ul>
-                        <h3>Main Funktion</h3>
+                        <h3>Hauptfunktionen</h3>
                         <li> Wenn Sie mit dem Mauszeiger auf die Bilder von den Kollegen gehen, werden die Informationen von den jeweiligen Personen angezeigt</li>
                         <li>Die Details jeder Aufgabe können Sie jederzeit bearbeiten, in dem Sie auf den Text klicken.</li>
                         <li>
@@ -49,10 +56,11 @@
                 </ol>
             </li>
 
-            <li><b><h2>Board:</h2></b> Hier können Sie Ihre Aufgaben, nachdem sie von Backlog weitergeleitet wurden, ansehen.
+            <li><b><h2>Board(Übersicht über Status aller Aufgaben):</h2></b> Hier können Sie Ihre Aufgaben, nachdem sie von Backlog weitergeleitet wurden, ansehen.
                 <ol>
                     <ul>
                         <h3>Main Funktion</h3>
+                        <li>(Hinweis) Wenn Sie ein Mobilegerät haben, klicken Sie auf die Aufgabe, dann wird Push to z.B. Todo angezeigt</li>
                         <li>Hier können Sie Ihre Aufgaben ganz einfach mit Hilfe der Maus von einer Liste z.B <b>Todo</b> zur anderen Liste z.B <b>Progress</b> per Drag und Drop verschieben.</li>
                         <li> Wenn Sie auf die jeweilige Aufgabe klicken, werden alle Informationen zur jeweiligen Aufgabe in einer Infobox eingebelendet und wenn Sie außerhalb der Infobox klicken, werden die Informationen wieder ausgeblendet.</li>
                         <li> Wenn Sie in der Infobox mit dem Mauszeiger auf die Bilder von den Kollegen gehen, werden die Informationen von den jeweiligen Personen (wie in Backlog) angezeigt.</li>
@@ -66,6 +74,59 @@
                 </ol>
             </li>
         </ul>
+    </div>
+
+    <!--   English -->
+    <div id="english" class="help m-left-50 m-top">
+        <h1>Help</h1>
+        <p>Here you will find the help you need for our Join Kanban:</p>
+    </div>
+    <div id="english-1" class="m-left-50 tasks m-btm">
+        <ul>
+
+            <li>
+                <h2><b>Add Task:</b> </h2>Here you can create tasks and assign available personnel.
+                </h2>
+                <li>
+                    <h2><b>Backlog:</b></h2> Here you can view all activities or tasks that have been created.
+                    <ol>
+                        <ul>
+                            <h3>Main Functions</h3>
+                            <li> If you move the mouse cursor over the pictures of the colleagues, the information of the respective persons will be displayed</li>
+                            <li>You can edit the details of each task at any time by clicking on the text.</li>
+                            <li>
+                                <span class="d-flex">If you click here <img style="padding: 4px 4px; width: 30px;" src="img/arrowToBoard.ico"> click on it, the tasks will be forwarded to Board. </span>
+                            </li>
+
+
+                            <h3>Colurs</h3>
+                            <li class="m-b-10 m-t-10"> The tasks with high priority will be <span class="HighB">outlined in red.</span></li>
+                            <li class="m-b-10"> The tasks with medium priority will be <span class="IntermediateB">outlined in yellow.</span></li>
+                            <li class="m-b-10"> The tasks with low priority will be <span class="LowB">outlined in green.</span></li>
+                        </ul>
+
+                    </ol>
+                </li>
+
+                <li><b><h2>Board:</h2></b> Here you can view your tasks after they have been forwarded from Backlog.
+                    <ol>
+                        <ul>
+                            <h3>Main Functions</h3>
+                            <li>(Hint) If you have a mobile device with touch screen, click on the task, then Push to e.g. Todo will be displayed</li>
+                            <li>Here you can easily drag and drop from one a list e.g.<b>Todo</b> to the other list e.g. <b>Progress</b></li>
+                            <li> If you click on the task, all the information about the task will be displayed in the info box and if you click outside the info box, the information will be hidden.</li>
+                            <li> If you move the mouse cursor over the pictures of the colleagues in the info box, the information of the respective persons (as in Backlog) will be displayed.</li>
+
+                            <h3>Colurs</h3>
+                            <b>When you move the mouse cursor over the task, the colors will be displayed as follows:</b>
+                            <li class="m-b-10 m-t-10"> The tasks with high priority will be <span class="High">outlined in red.</span></li>
+                            <li class="m-b-10"> The tasks with medium priority will be <span class="Intermediate">outlined in yellow.</span></li>
+                            <li class="m-b-10"> The tasks with low priority will be <span class="Low">outlined in green.</span></li>
+                        </ul>
+                    </ol>
+                </li>
+        </ul>
+    </div>
 </body>
 
 </html>

@@ -30,7 +30,6 @@
 
 
     <div w3-include-html="templates/header.html"></div>
-
     <div class="contentCont">
         <div class="heading1 m-top">
             <h1>Board</h1>
@@ -41,7 +40,7 @@
 
             <div class="boards">
                 <span class="todo">TO DO</span>
-                <div class="board" id="toDo" ondrop="moveTo('toDo')" ondragover="allowDrop(event)"></div>
+                <div class="board" id="toDo" ondragenter="moveTo('toDo')" ondrop="moveTo('toDo')" ondragover="allowDrop(event)"></div>
             </div>
 
             <div class="boards">
@@ -62,6 +61,11 @@
         </div>
 
     </div>
+    <script>
+        Drog.on(document.forms["drag-head"]);
+        Drog.on(document.forms["drag-head2"]);
+        //Drog.on(document.forms["drag-body"]);
+    </script>
     <div id="snackbar-delete">Task successfully deleted</div>
 </body>
 
