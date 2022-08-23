@@ -17,12 +17,12 @@ const isTouchDevice = () => {
         (navigator.maxTouchPoints > 0) ||
         (navigator.msMaxTouchPoints > 0));
 }
-console.log(isTouchDevice())
+
 
 const tisTouchDevice = () => {
     return window.matchMedia("(pointer: coarse)").matches
 }
-console.log(tisTouchDevice())
+
 
 /**
  * This function filters the boardArray for the string in the key-value pair "inArray" and assigns the objects with that string to the respective variables. 
@@ -125,7 +125,7 @@ function generateTasksHTML(element, i, type) {
  */
 function openTask(i, type) {
     isTouchDevice();
-    console.log(isTouchDevice());
+
     document.getElementById('overlayBg').classList.remove('d-none');
     document.getElementById('openTask').classList.remove('d-none');
     let tasks = boardArray.filter(t => t['inArray'] == type);

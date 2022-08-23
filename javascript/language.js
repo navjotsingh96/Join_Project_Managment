@@ -19,8 +19,6 @@ function EnglishLang() {
     EN1.classList.remove('d-none');
     DE.classList.add('d-none');
     DE1.classList.add('d-none');
-    console.log('Done');
-
 }
 
 function DeutschLang() {
@@ -39,7 +37,5 @@ function DeutschLang() {
     EN1.classList.add('d-none');
     DE.classList.remove('d-none');
     DE1.classList.remove('d-none');
-    console.log('Done');
-
 
 }
